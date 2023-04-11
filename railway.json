@@ -2,8 +2,5 @@
   "$schema": "https://railway.app/railway.schema.json",
   "deploy": {
     "startCommand": "python api.py",
-    "healthcheckPath": "/",
-    "healthcheckTimeout": 100,
-    "restartPolicyType": "never"
   }
 }
