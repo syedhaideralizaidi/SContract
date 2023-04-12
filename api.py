@@ -58,4 +58,4 @@ def transcribe_audio():
     return jsonify({'text': result['text'], 'filter':filter1, 'entities':entity_array}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0')
