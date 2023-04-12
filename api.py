@@ -33,8 +33,14 @@ nlp1 = spacy.load(r"model-last") #load the best model
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST'])
+@app.route('/',methods=['POST','GET'])
+def hello():
+    print("Hellooo")
+    return "Hello World"
+
+@app.route('/transcribe', methods=['POST'])
 def transcribe_audio():
+    print("Andar aagaya")
     if 'file' not in request.files:
         return jsonify({'error': 'No audio file found in request'}), 400
 
